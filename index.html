@@ -80,11 +80,12 @@ input,textarea,button,select{font-family:inherit;font-size:16px}
 .del-btn:active{background:var(--border);color:var(--red)}
 
 /* ADD FORM */
-.add-row{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--border)}
-.add-row input{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-size:14px;color:var(--text);outline:none}
+.add-row{display:flex;flex-direction:column;gap:8px;padding:12px 16px;border-top:1px solid var(--border)}
+.add-row-inner{display:flex;gap:8px}
+.add-row input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 12px;font-size:14px;color:var(--text);outline:none}
 .add-row input:focus{border-color:var(--green)}
-.add-row .time-in{width:110px;flex:none}
-.add-btn{background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+.add-row .time-in{flex:1;min-width:0}
+.add-btn{background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:11px 16px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .add-btn:active{background:var(--green-dark)}
 .add-btn-full{width:100%;background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:13px;font-size:15px;font-weight:600;cursor:pointer;margin-top:8px}
 .add-btn-full:active{background:var(--green-dark)}
@@ -177,9 +178,11 @@ input,textarea,button,select{font-family:inherit;font-size:16px}
       <div class="card">
         <div id="task-list"></div>
         <div class="add-row">
-          <input type="text" id="new-task" placeholder="Tambah kegiatan..." />
-          <input type="time" id="new-time" class="time-in"/>
-          <button class="add-btn" onclick="addTask()">+</button>
+          <input type="text" id="new-task" placeholder="Tambah kegiatan baru..." />
+          <div class="add-row-inner">
+            <input type="time" id="new-time" class="time-in"/>
+            <button class="add-btn" onclick="addTask()">+ Tambah</button>
+          </div>
         </div>
       </div>
     </div>
