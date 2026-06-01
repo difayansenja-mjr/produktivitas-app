@@ -2,7 +2,8 @@
   "name": "Produktivitas Diri",
   "short_name": "Produktivitas",
   "description": "Aplikasi produktivitas harian — To-Do, Kegiatan Harian, Pomodoro, Kebiasaan, Catatan",
-  "start_url": "/",
+  "start_url": "/produktivitas-app/",
+  "scope": "/produktivitas-app/",
   "display": "standalone",
   "background_color": "#F7F8FA",
   "theme_color": "#0F6E56",
@@ -64,13 +65,13 @@
     {
       "name": "Kegiatan Harian",
       "short_name": "Harian",
-      "url": "/?page=harian",
+      "url": "/produktivitas-app/?page=harian",
       "icons": [{"src": "icons/icon-96.png", "sizes": "96x96"}]
     },
     {
       "name": "To-Do List",
       "short_name": "To-Do",
-      "url": "/?page=todo",
+      "url": "/produktivitas-app/?page=todo",
       "icons": [{"src": "icons/icon-96.png", "sizes": "96x96"}]
     }
   ]
